@@ -2,13 +2,6 @@
 {% block content %}
 
 <div style="font-size: 1rem; float: right;">
-  {% if backup_times.shared %}
-    <span class="badge {% if (now - backup_times.shared).days > 1 %}bg-danger text-white{% else %}bg-success text-white{% endif %}">
-      Shared Backup: {{ backup_times.shared.strftime('%Y-%m-%d %H:%M') }}
-    </span>
-  {% else %}
-    <span class="badge bg-danger text-white">Shared Backup: N/A</span>
-  {% endif %}
   <br>
   {% if backup_times.local %}
     <span class="badge {% if (now - backup_times.local).days > 1 %}bg-danger text-white{% else %}bg-success text-white{% endif %}">

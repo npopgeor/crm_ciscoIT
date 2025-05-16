@@ -1,0 +1,83 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+  <h2 class="mb-4">📁 All Uploaded Files</h2>
+  <a href="{{ url_for('upload_files') }}" class="btn btn-primary">➕ Upload Files</a>
+</div>
+
+<form method="get" class="mb-3">
+  <label for="customer_filter">Filter by Customer:</label>
+  <select id="customer_filter" name="customer" onchange="this.form.submit()" class="form-select w-auto d-inline">
+    <option value="">All</option>
+    {% for cust in customers %}
+      <option value="{{ cust.name }}" {% if selected_customer == cust.name %}selected{% endif %}>{{ cust.name }}</option>
+    {% endfor %}
+
+  </select>
+</form>
+
+<h5 class="mt-4">🆕 Recently Uploaded Files</h5>
+<ul class="list-group mb-4">
+  {% for file in recent_files %}
+    <li class="list-group-item">
+      <div class="d-flex justify-content-between align-items-center flex-wrap">
+        <!-- Filename (clickable, truncates if too long) -->
+        <div class="me-auto" style="max-width: 60%; overflow: hidden;">
+          <a href="{{ url_for('uploaded_file', filename=file.filename) }}"
+             target="_blank"
+             class="text-decoration-none text-truncate d-block"
+             style="max-width: 100%;">
+            {{ file.filename }}
+          </a>
+        </div>
+
+        <!-- Timestamp -->
+        <div class="text-muted small text-nowrap mx-3">
+          {{ file.uploaded_at.strftime('%b %d, %Y %H:%M') if file.uploaded_at else '—' }}
+        </div>
+
+        <!-- Delete button -->
+        <form method="post"
+              action="{{ url_for('delete_file', file_id=file.id) }}"
+              style="display: inline;">
+          <button type="submit" class="btn btn-sm btn-outline-danger">🗑️</button>
+        </form>
+      </div>
+    </li>
+  {% endfor %}
+</ul>
+
+
+
+{% macro render_group(name, files) %}
+  {% set group_id = name|replace(' ', '_') %}
+  <div class="card mb-3">
+    <div class="card-header">
+      <a class="btn btn-link" data-bs-toggle="collapse" href="#collapse_{{ group_id }}">
+        📁 {{ name }}
+      </a>
+    </div>
+    <div id="collapse_{{ group_id }}" class="collapse">
+      <ul class="list-group">
+        {% for file in files %}
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <a href="{{ url_for('uploaded_file', filename=file.filename) }}" target="_blank">
+              {{ file.filename }}
+            </a>
+            <form method="post" action="{{ url_for('delete_file', file_id=file.id) }}" style="display:inline">
+              <button type="submit" class="btn btn-sm btn-outline-danger">🗑️</button>
+            </form>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+{% endmacro %}
+
+{% for group_name, files in grouped_files.items() %}
+  {% if files %}
+    {{ render_group(group_name, files) }}
+  {% endif %}
+{% endfor %}
+
+{% endblock %}

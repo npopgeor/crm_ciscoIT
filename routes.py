@@ -27,11 +27,8 @@ from app import (
 )
 from config import (
     BACKUP_LOCAL_DIR,
-    BACKUP_SHARED_DIR,
     COLUMNS,
     DATABASE_PATH,
-    DISCOVERY_ROOT,
-    SKIP_FOLDERS,
     USERS,
 
 )
@@ -62,7 +59,6 @@ from models import (
 from utils import (
     get_customer_attachments,
     log_change,
-    scan_and_index_files,
     secure_folder_name,
     sync_customer_files_logic,
     logger,
@@ -73,8 +69,6 @@ from utils import (
     is_locked, 
     lock_info, 
     lock_expired,
-    get_new_files_today_count,
-    file_scan_cache,
 )
 
 
@@ -143,11 +137,10 @@ def get_grouped_contacts():
         "partner_contacts": partner_groups,
         "unassigned_contacts": unassigned_contacts,
     }
-
 @app.route("/search")
 def search():
     query = request.args.get("q", "").strip()
-    query_words = query.lower().split()  # ✅ Define early, before use
+    query_words = query.lower().split()
 
     customers = Customer.query.filter(
         (Customer.name.ilike(f"%{query}%"))
@@ -164,33 +157,22 @@ def search():
         | (Contact.notes.ilike(f"%{query}%"))
         | (Contact.customer.has(Customer.name.ilike(f"%{query}%")))
     ).all()
-    
+
     links = Link.query.filter(
         (Link.link_text.ilike(f"%{query}%"))
         | (Link.url.ilike(f"%{query}%"))
         | (Link.others.ilike(f"%{query}%"))
     ).all()
-        
+
     partners = Partner.query.filter(
-        (Partner.name.ilike(f"%{query}%")) | (Partner.notes.ilike(f"%{query}%"))
+        (Partner.name.ilike(f"%{query}%"))
+        | (Partner.notes.ilike(f"%{query}%"))
     ).all()
 
-    file_name_hits = []
+    file_name_hits = DivisionDocument.query.filter(
+        DivisionDocument.filename.ilike(f"%{query}%")
+    ).all()
 
-    for root, dirs, files in os.walk(DISCOVERY_ROOT):
-        if any(skip in root for skip in SKIP_FOLDERS):
-            continue
-
-        rel_root = os.path.relpath(root, DISCOVERY_ROOT)
-        if all(word in rel_root.lower() for word in query_words):
-            file_name_hits.append(rel_root + "/")
-
-        for file in files:
-            if file.startswith("."):
-                continue
-            if all(word in file.lower() for word in query_words):
-                rel_path = os.path.relpath(os.path.join(root, file), DISCOVERY_ROOT)
-                file_name_hits.append(rel_path)
 
     return render_template(
         "search_results.html",
@@ -198,84 +180,10 @@ def search():
         customers=customers,
         contacts=contacts,
         partners=partners,
-        file_name_hits=file_name_hits,
-        links=links  # ✅ Add this line
+        links=links,
+        file_name_hits=file_name_hits
     )
 
-
-from datetime import datetime
-
-
-@app.route("/files")
-def all_files_by_customer():
-    grouped_files = {}
-    all_files = []
-    today = date.today()
-    new_files_today = []
-
-    for root, _, files in os.walk(DISCOVERY_ROOT):
-        if any(skip in root for skip in SKIP_FOLDERS):
-            continue
-        for file in files:
-            if file.startswith("."):
-                continue
-            full_path = os.path.join(root, file)
-            rel_path = os.path.relpath(full_path, DISCOVERY_ROOT)
-            mod_time = os.path.getmtime(full_path)
-            mod_dt = datetime.fromtimestamp(mod_time)
-
-            if mod_dt.date() == today:
-                new_files_today.append(rel_path)
-
-            all_files.append({
-                "path": rel_path,
-                "timestamp": mod_time,
-                "date": mod_dt.strftime("%Y-%m-%d %H:%M")
-            })
-
-            # Build folder tree
-            parts = rel_path.split("/")
-            current = grouped_files
-            for part in parts[:-1]:
-                current = current.setdefault(part, {})
-            current[parts[-1]] = rel_path
-
-    # ✅ Update file_scan_cache with latest real-time scan result
-    now = datetime.now()
-    file_scan_cache.update({
-        "date": today,
-        "count": len(new_files_today),
-    })
-    logger.info(f"📁 /files triggered real scan at {now.strftime('%H:%M')} — {len(new_files_today)} new files found.")
-
-    # ✅ Respect your scanning window logic
-    if 11 <= now.hour < 16:
-        file_scan_cache["scanned_11"] = True
-    elif 16 <= now.hour <= 23:
-        file_scan_cache["scanned_16"] = True
-    # NOTE: if before 11, don't mark either flag
-
-    recent_files = sorted(all_files, key=lambda x: x["timestamp"], reverse=True)[:5]
-
-    return render_template(
-        "all_files.html",
-        grouped_files=grouped_files,
-        recent_files=recent_files,
-        new_files_today=new_files_today
-    )
-
-@app.route("/sync_all_files", methods=["POST"])
-def sync_all_files():
-    scan_and_index_files()
-    return redirect(url_for("all_files_by_customer"))
-
-
-@app.route("/onedrive/<path:filename>")
-def serve_from_onedrive(filename):
-    full_path = os.path.join(DISCOVERY_ROOT, filename)
-    if not os.path.isfile(full_path):
-        abort(404)
-    return send_file(full_path)
 
 
 @app.route("/contacts")
@@ -2217,23 +2125,19 @@ def download_recurring_ics(meeting_id):
 def backup_db():
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     filename = f"account_team_{timestamp}.db"
-    shared_backup_path = os.path.join(BACKUP_SHARED_DIR, filename)
     local_backup_path = os.path.join(BACKUP_LOCAL_DIR, filename)
 
     try:
-        os.makedirs(BACKUP_SHARED_DIR, exist_ok=True)
         os.makedirs(BACKUP_LOCAL_DIR, exist_ok=True)
 
         with open(DATABASE_PATH, "rb") as src:
             data = src.read()
 
-        with open(shared_backup_path, "wb") as f1:
-            f1.write(data)
         with open(local_backup_path, "wb") as f2:
             f2.write(data)
 
         log_change("Manual backup", filename)
-        return redirect(url_for("settings", msg="✅ Backup saved to OneDrive + Mac!"))
+        return redirect(url_for("settings", msg="✅ Backup saved!"))
 
     except Exception as e:
         logger.error(f"❌ Manual backup failed: {e}")
@@ -2314,12 +2218,6 @@ def inject_meetings_today():
 @app.context_processor
 def inject_lock_status():
     return dict(is_locked=is_locked)
-
-
-@app.context_processor
-def inject_new_file_count():
-    from config import DISCOVERY_ROOT, SKIP_FOLDERS
-    return dict(new_files_today_count=get_new_files_today_count(DISCOVERY_ROOT, SKIP_FOLDERS))
 
 
 # ------------------ DASHBOARD ROUTES ---------------------
@@ -2511,7 +2409,7 @@ def settings():
             lines = f.readlines()
             #filtered_lines = lines
             filtered_lines = [line for line in lines if "Nik" in line or "Gary" in line]
-            log_content = "".join(reversed(filtered_lines[-200:]))  # Show last 200 matching lines
+            log_content = "".join(reversed(filtered_lines[-400:]))  # Show last 400 matching lines
     except Exception as e:
         log_content = f"❌ Could not read log file: {e}"
     
@@ -2612,3 +2510,99 @@ def unlock():
         return "", 204  # Success
     logger.info("⚠️ Unlock blocked: session does not own the lock")
     return "", 403  # Forbidden
+
+@app.route("/files", methods=["GET"])
+def files():
+    search_customer = request.args.get("customer")
+    files_query = DivisionDocument.query.order_by(DivisionDocument.id.desc())
+
+    if search_customer:
+        customer = Customer.query.filter_by(name=search_customer).first()
+        if customer:
+            customer_div_ids = [d.id for d in customer.divisions]
+            files_query = files_query.filter(DivisionDocument.division_id.in_(customer_div_ids))
+
+    all_files = files_query.all()
+
+    latest_files = DivisionDocument.query.order_by(DivisionDocument.id.desc()).limit(5).all()
+
+    # Group files under customer/general folders
+    grouped = {}
+    for doc in all_files:
+        customer = doc.division.customer.name if doc.division.customer else "General"
+        grouped.setdefault(customer, []).append(doc)
+
+    customers = Customer.query.order_by(Customer.name).all()
+
+    return render_template(
+        "files.html",
+        grouped_files=grouped,
+        customers=customers,
+        selected_customer=search_customer,
+        recent_files=latest_files
+    )
+
+
+@app.route("/files/delete/<int:file_id>", methods=["POST"])
+def delete_file(file_id):
+    doc = DivisionDocument.query.get_or_404(file_id)
+    full_path = os.path.join(app.config["UPLOAD_FOLDER"], doc.filename)
+
+    try:
+        if os.path.exists(full_path):
+            os.remove(full_path)
+        db.session.delete(doc)
+        db.session.commit()
+        log_change("Deleted file", doc.filename)
+        #flash("🗑 File deleted successfully.", "success")
+    except Exception as e:
+        logger.error(f"Failed to delete file: {e}")
+        flash("⚠️ Error deleting file.", "danger")
+
+    return redirect(url_for("files"))
+
+@app.route("/files/upload", methods=["GET", "POST"])
+def upload_files():
+    customers = Customer.query.order_by(Customer.name).all()
+
+    if request.method == "POST":
+        customer_id = request.form.get("customer_id")
+        customer = Customer.query.get(int(customer_id)) if customer_id else None
+        folder = secure_folder_name(customer.name) if customer else "General"
+
+        files = request.files.getlist("files") + request.files.getlist("folder_files")
+
+        root_div = Division.query.filter_by(
+            customer_id=customer.id if customer else None,
+            parent_id=None
+        ).first()
+        if not root_div:
+            root_div = Division(name=folder, customer_id=customer.id if customer else None)
+            db.session.add(root_div)
+            db.session.commit()
+
+        for file in files:
+            if file and file.filename:
+                rel_path = getattr(file, 'filename', file.name).strip("/")
+                file_path = os.path.join(app.config["UPLOAD_FOLDER"], folder, rel_path)
+                os.makedirs(os.path.dirname(file_path), exist_ok=True)
+                file.save(file_path)
+
+                rel_db_path = os.path.relpath(file_path, app.config["UPLOAD_FOLDER"])
+
+                doc = DivisionDocument(
+                    division_id=root_div.id,
+                    filename=rel_db_path
+                )
+                db.session.add(doc)
+
+                # ✅ Log each uploaded file with customer info and username
+                log_change(
+                    "Uploaded file",
+                    f"{rel_db_path}"
+                )
+
+        db.session.commit()
+        return redirect(url_for("files"))
+
+    return render_template("upload_files.html", customers=customers)

@@ -1,0 +1,157 @@
+2025-05-16 10:36:48,752 — 📝 File logging initialized.
+2025-05-16 10:37:00,554 — 📝 File logging initialized.
+2025-05-16 10:37:48,395 — 📝 File logging initialized.
+2025-05-16 10:38:25,222 — 📝 File logging initialized.
+2025-05-16 10:38:58,120 — 📝 File logging initialized.
+2025-05-16 10:41:53,542 — 📝 File logging initialized.
+2025-05-16 10:41:54,255 — 📝 File logging initialized.
+2025-05-16 10:44:40,549 — 📝 File logging initialized.
+2025-05-16 10:44:45,186 — 📝 File logging initialized.
+2025-05-16 10:44:45,801 — 📝 File logging initialized.
+2025-05-16 10:49:35,028 — [nik] Manual backup → account_team_20250516_104935.db
+2025-05-16 10:50:46,330 — [nik] Manual backup → account_team_20250516_105046.db
+2025-05-16 10:52:38,363 — [nik] Added contact → adsasd – Cisco
+2025-05-16 10:54:39,471 — 📝 File logging initialized.
+2025-05-16 10:54:56,655 — 📝 File logging initialized.
+2025-05-16 10:55:30,568 — [Nik] Added contact → asdasd – Cisco
+2025-05-16 10:55:53,198 — 📝 File logging initialized.
+2025-05-16 10:56:26,454 — ⚠️ No logo uploaded or wrong file type.
+2025-05-16 10:56:38,570 — [Nik] Edited customer → test
+2025-05-16 10:57:14,387 — [Nik] Deleted customer → test
+2025-05-16 10:57:22,255 — [Nik] Exported all action items → action_items_export_2025-05-16.csv
+2025-05-16 11:00:31,554 — 📝 File logging initialized.
+2025-05-16 11:01:03,977 — 📝 File logging initialized.
+2025-05-16 11:04:03,516 — 📝 File logging initialized.
+2025-05-16 11:06:51,020 — 📝 File logging initialized.
+2025-05-16 11:09:50,582 — 📝 File logging initialized.
+2025-05-16 11:11:11,260 — 📝 File logging initialized.
+2025-05-16 11:11:29,648 — 📝 File logging initialized.
+2025-05-16 11:17:48,705 — 📝 File logging initialized.
+2025-05-16 11:18:01,721 — 📝 File logging initialized.
+2025-05-16 11:24:05,782 — 📝 File logging initialized.
+2025-05-16 11:24:21,681 — 📝 File logging initialized.
+2025-05-16 11:33:59,580 — 📝 File logging initialized.
+2025-05-16 11:34:00,284 — 📝 File logging initialized.
+2025-05-16 11:34:16,101 — [Nik] Deleted file → Ziply/WHOLESAIL NETWORKS LLC _283488276__250213116232708.xlsb
+2025-05-16 11:34:24,205 — [Nik] Deleted file → Ziply/FY24 End of Year Pricing/Ziply_10GPE_CISCO-PRICING.pptx
+2025-05-16 11:34:29,204 — [Nik] Deleted file → Ziply/FY24 End of Year Pricing/Ziply_10GPE_CISCO-PRICING INTERNAL.pptx
+2025-05-16 11:34:48,073 — [Nik] Deleted file → Ziply/FY21 Account Plan/Harold_Zeitz.png
+2025-05-16 11:35:05,708 — [Nik] Deleted file → Ziply/FY21 Account Plan/Ziply Fiber_summary.pdf
+2025-05-16 11:35:23,557 — [Nik] Deleted file → Ziply/Broadsoft Opt/Ziply Calling Plan.jpg
+2025-05-16 11:35:26,890 — [Nik] Deleted file → Ziply/Broadsoft Opt/Ziply Current Calling Plan.jpg
+2025-05-16 11:35:33,057 — [Nik] Deleted file → Ziply/NCS4k/NCS_4K (1).xlsx
+2025-05-16 11:35:53,205 — 📝 File logging initialized.
+2025-05-16 11:36:03,805 — [Nik] Deleted file → Ziply/NCS ASR Orders/Quote_4730668726 ASR920 with Discounts.xls
+2025-05-16 11:36:06,006 — [Nik] Deleted file → Ziply/NCS ASR Orders/Ziply Chicago NCS.pdf
+2025-05-16 11:36:08,206 — [Nik] Deleted file → Ziply/NCS ASR Orders/Quote_4727459520 5502SE with Discounts.xlsx
+2025-05-16 11:36:09,979 — [Nik] Deleted file → Ziply/NCS ASR Orders/20162158 - standard 5508.pdf
+2025-05-16 11:36:12,022 — [Nik] Deleted file → Ziply/NCS ASR Orders/Ziply - PE Router Options - 06212024v2.xlsx
+2025-05-16 11:36:14,291 — [Nik] Deleted file → Ziply/NCS ASR Orders/Quote_4729263815 5501SE with Discounts.xls
+2025-05-16 11:36:16,273 — [Nik] Deleted file → Ziply/NCS ASR Orders/Quote_4735140006 540 with discounts.xls
+2025-05-16 11:36:17,874 — [Nik] Deleted file → Ziply/NCS ASR Orders/Ziply_PE_Router_options.xlsx
+2025-05-16 11:36:19,907 — [Nik] Deleted file → Ziply/Easy Protect/Ziply Easy Protect ROI.PNG
+2025-05-16 11:36:22,107 — [Nik] Deleted file → Ziply/SmartNet Renewals/Ziply - GDT SMARTnet Quote 1-20-23.xlsx
+2025-05-16 11:36:24,242 — [Nik] Deleted file → Ziply/NCS5k SSD Issue/~$Cisco SSD Failure Workbook GG Edit.xlsx
+2025-05-16 11:36:26,875 — [Nik] Deleted file → Ziply/NCS5k SSD Issue/WHOLESAIL NETWORKS LLC.xlsx
+2025-05-16 11:36:28,941 — [Nik] Deleted file → Ziply/NCS5k SSD Issue/Cisco SSD Failure Workbook GG Edit.xlsx
+2025-05-16 11:36:31,608 — [Nik] Deleted file → Ziply/NCS5k SSD Issue/Cisco SSD Failure Workbook.xlsx
+2025-05-16 11:36:33,708 — [Nik] Deleted file → Ziply/NCS5k SSD Issue/~$WHOLESAIL NETWORKS LLC.xlsx
+2025-05-16 11:36:36,258 — [Nik] Deleted file → Ziply/NCS540 Pricing/Ziply_10GPE_CISCO-PRICING.pptx
+2025-05-16 11:36:38,608 — [Nik] Deleted file → Ziply/NCS540 Pricing/Ziply NCS540 Pricing.jpg
+2025-05-16 11:36:40,657 — [Nik] Deleted file → Ziply/NCS540 Pricing/1 Year.pdf
+2025-05-16 11:39:38,947 — [Nik] Deleted file → Ziply/Accedian_-_Riot_-_May_8_2025.rtf
+2025-05-16 11:39:57,030 — [Nik] Deleted file → Boingo/Screenshot_2025-05-12_at_12.25.11_PM.png
+2025-05-16 11:42:00,964 — [Nik] Deleted file → Boingo/Boingo_wireless_competitors_Aruba_Ruckus_Extreme_WiFi_Comparison.jpg
+2025-05-16 11:42:01,294 — [Nik] Deleted file → Boingo/Boingo_wireless_Boingo-providence-airport.rtf
+2025-05-16 11:42:01,645 — [Nik] Deleted file → Boingo/Boingo_wireless_Boingo_-_introduction_-_August_20th_2024.rtf
+2025-05-16 11:42:01,960 — [Nik] Deleted file → Boingo/Boingo_wireless_Boing_-_Wifi_call_-_April_30th.rtf
+2025-05-16 11:42:02,162 — [Nik] Deleted file → Boingo/Boingo_wireless_Boingo-Marco-ISE_call_-_April21st.rtf
+2025-05-16 11:42:02,527 — [Nik] Deleted file → Boingo/Boingo_wireless_Boingo_Software_Assets_WWT_8_14_2024.xlsx
+2025-05-16 11:42:02,880 — [Nik] Deleted file → Boingo/Boingo_wireless_Boingo-_April_24th_2025.rtf
+2025-05-16 11:42:03,361 — [Nik] Deleted file → Boingo/Boingo_wireless_.DS_Store
+2025-05-16 11:42:03,728 — [Nik] Deleted file → Boingo/Boingo_wireless_Installed_Base_Boingo_Covered_IB_Report_Sept_2024.xlsb
+2025-05-16 11:42:04,067 — [Nik] Deleted file → Boingo/Boingo_wireless_Boingo_wireless_partner_call_-_August_13_2024_.rtf
+2025-05-16 11:46:28,637 — 📝 File logging initialized.
+2025-05-16 11:46:37,871 — [Nik] Deleted file → Boingo/Boingo_wireless_competitors_Aruba_Ruckus_Extreme_WiFi_Comparison.jpg
+2025-05-16 11:46:38,198 — [Nik] Deleted file → Boingo/Boingo_wireless_Boingo-providence-airport.rtf
+2025-05-16 11:46:38,465 — [Nik] Deleted file → Boingo/Boingo_wireless_Boingo_-_introduction_-_August_20th_2024.rtf
+2025-05-16 11:46:38,767 — [Nik] Deleted file → Boingo/Boingo_wireless_Boing_-_Wifi_call_-_April_30th.rtf
+2025-05-16 11:46:39,034 — [Nik] Deleted file → Boingo/Boingo_wireless_Boingo-Marco-ISE_call_-_April21st.rtf
+2025-05-16 11:46:39,333 — [Nik] Deleted file → Boingo/Boingo_wireless_Boingo_Software_Assets_WWT_8_14_2024.xlsx
+2025-05-16 11:46:39,633 — [Nik] Deleted file → Boingo/Boingo_wireless_Boingo-_April_24th_2025.rtf
+2025-05-16 11:46:39,948 — [Nik] Deleted file → Boingo/Boingo_wireless_.DS_Store
+2025-05-16 11:46:40,532 — [Nik] Deleted file → Boingo/Boingo_wireless_Installed_Base_Boingo_Covered_IB_Report_Sept_2024.xlsb
+2025-05-16 11:46:40,981 — [Nik] Deleted file → Boingo/Boingo_wireless_Boingo_wireless_partner_call_-_August_13_2024_.rtf
+2025-05-16 11:48:18,790 — 📝 File logging initialized.
+2025-05-16 11:48:41,801 — [Nik] Deleted file → General/Boingo wireless/competitors/Aruba_Ruckus_Extreme_WiFi_Comparison.jpg
+2025-05-16 11:48:42,289 — [Nik] Deleted file → General/Boingo wireless/Boingo-providence-airport.rtf
+2025-05-16 11:48:42,580 — [Nik] Deleted file → General/Boingo wireless/Boingo - introduction - August 20th 2024.rtf
+2025-05-16 11:48:43,063 — [Nik] Deleted file → General/Boingo wireless/Boing - Wifi call - April 30th.rtf
+2025-05-16 11:48:43,379 — [Nik] Deleted file → General/Boingo wireless/Boingo-Marco-ISE call - April21st.rtf
+2025-05-16 11:48:43,682 — [Nik] Deleted file → General/Boingo wireless/Boingo Software Assets WWT 8 14 2024.xlsx
+2025-05-16 11:48:43,996 — [Nik] Deleted file → General/Boingo wireless/Boingo- April 24th 2025.rtf
+2025-05-16 11:48:44,297 — [Nik] Deleted file → General/Boingo wireless/.DS_Store
+2025-05-16 11:48:44,614 — [Nik] Deleted file → General/Boingo wireless/Installed Base/Boingo Covered IB Report Sept 2024.xlsb
+2025-05-16 11:48:45,432 — [Nik] Deleted file → General/Boingo wireless/Boingo wireless partner call - August 13 2024 .rtf
+2025-05-16 11:49:27,299 — [Nik] Deleted file → Boingo/Boingo wireless/competitors/Aruba_Ruckus_Extreme_WiFi_Comparison.jpg
+2025-05-16 11:49:27,582 — [Nik] Deleted file → Boingo/Boingo wireless/Boingo-providence-airport.rtf
+2025-05-16 11:49:27,867 — [Nik] Deleted file → Boingo/Boingo wireless/Boingo - introduction - August 20th 2024.rtf
+2025-05-16 11:49:28,136 — [Nik] Deleted file → Boingo/Boingo wireless/Boing - Wifi call - April 30th.rtf
+2025-05-16 11:49:28,433 — [Nik] Deleted file → Boingo/Boingo wireless/Boingo-Marco-ISE call - April21st.rtf
+2025-05-16 11:49:28,732 — [Nik] Deleted file → Boingo/Boingo wireless/Boingo Software Assets WWT 8 14 2024.xlsx
+2025-05-16 11:49:29,049 — [Nik] Deleted file → Boingo/Boingo wireless/Boingo- April 24th 2025.rtf
+2025-05-16 11:49:29,365 — [Nik] Deleted file → Boingo/Boingo wireless/.DS_Store
+2025-05-16 11:49:29,800 — [Nik] Deleted file → Boingo/Boingo wireless/Installed Base/Boingo Covered IB Report Sept 2024.xlsb
+2025-05-16 11:49:30,350 — [Nik] Deleted file → Boingo/Boingo wireless/Boingo wireless partner call - August 13 2024 .rtf
+2025-05-16 11:50:51,044 — 📝 File logging initialized.
+2025-05-16 11:53:23,462 — 📝 File logging initialized.
+2025-05-16 11:53:30,321 — 📝 File logging initialized.
+2025-05-16 11:55:52,501 — 📝 File logging initialized.
+2025-05-16 11:55:57,567 — 📝 File logging initialized.
+2025-05-16 11:56:03,427 — [Nik] Deleted file → Boingo/Installed Base/Boingo Covered IB Report Sept 2024.xlsb
+2025-05-16 11:56:09,914 — [Nik] Uploaded file → Boingo/Boingo Covered IB Report Sept 2024.xlsb → Customer: Boingo → By: Nik
+2025-05-16 11:56:32,630 — [Nik] Uploaded file → Boingo/Installed Base/Boingo Covered IB Report Sept 2024.xlsb → Customer: Boingo → By: Nik
+2025-05-16 11:57:32,421 — 📝 File logging initialized.
+2025-05-16 11:57:34,974 — [Nik] Manual backup → account_team_20250516_115734.db
+2025-05-16 11:57:42,428 — [Nik] Deleted file → Boingo/Installed Base/Boingo Covered IB Report Sept 2024.xlsb
+2025-05-16 11:57:42,842 — [Nik] Deleted file → Boingo/Boingo Covered IB Report Sept 2024.xlsb
+2025-05-16 11:57:54,249 — [Nik] Uploaded file → General/Boingo Covered IB Report Sept 2024.xlsb → Customer: General
+2025-05-16 11:58:11,799 — 📝 File logging initialized.
+2025-05-16 11:58:25,747 — [Nik] Uploaded file → General/Boingo wireless/Boingo wireless partner call - August 13 2024 .rtf
+2025-05-16 11:58:25,750 — [Nik] Uploaded file → General/Boingo wireless/Installed Base/Boingo Covered IB Report Sept 2024.xlsb
+2025-05-16 11:58:25,751 — [Nik] Uploaded file → General/Boingo wireless/.DS_Store
+2025-05-16 11:58:25,751 — [Nik] Uploaded file → General/Boingo wireless/Boingo- April 24th 2025.rtf
+2025-05-16 11:58:25,752 — [Nik] Uploaded file → General/Boingo wireless/Boingo Software Assets WWT 8 14 2024.xlsx
+2025-05-16 11:58:25,753 — [Nik] Uploaded file → General/Boingo wireless/Boingo-Marco-ISE call - April21st.rtf
+2025-05-16 11:58:25,753 — [Nik] Uploaded file → General/Boingo wireless/Boing - Wifi call - April 30th.rtf
+2025-05-16 11:58:25,754 — [Nik] Uploaded file → General/Boingo wireless/Boingo - introduction - August 20th 2024.rtf
+2025-05-16 11:58:25,754 — [Nik] Uploaded file → General/Boingo wireless/Boingo-providence-airport.rtf
+2025-05-16 11:58:25,758 — [Nik] Uploaded file → General/Boingo wireless/competitors/Aruba_Ruckus_Extreme_WiFi_Comparison.jpg
+2025-05-16 11:58:47,029 — 📝 File logging initialized.
+2025-05-16 11:59:11,170 — 📝 File logging initialized.
+2025-05-16 11:59:17,079 — 📝 File logging initialized.
+2025-05-16 11:59:29,143 — 📝 File logging initialized.
+2025-05-16 12:04:37,750 — 📝 File logging initialized.
+2025-05-16 12:04:55,992 — 📝 File logging initialized.
+2025-05-16 12:07:05,797 — [Nik] Deleted file → General/Boingo wireless/competitors/Aruba_Ruckus_Extreme_WiFi_Comparison.jpg
+2025-05-16 12:07:06,841 — [Nik] Deleted file → General/Boingo wireless/Boingo-providence-airport.rtf
+2025-05-16 12:07:07,074 — [Nik] Deleted file → General/Boingo wireless/Boingo - introduction - August 20th 2024.rtf
+2025-05-16 12:07:07,409 — [Nik] Deleted file → General/Boingo wireless/Boing - Wifi call - April 30th.rtf
+2025-05-16 12:07:07,696 — [Nik] Deleted file → General/Boingo wireless/Boingo-Marco-ISE call - April21st.rtf
+2025-05-16 12:07:07,975 — [Nik] Deleted file → General/Boingo wireless/Boingo Software Assets WWT 8 14 2024.xlsx
+2025-05-16 12:07:08,292 — [Nik] Deleted file → General/Boingo wireless/Boingo- April 24th 2025.rtf
+2025-05-16 12:07:08,593 — [Nik] Deleted file → General/Boingo wireless/.DS_Store
+2025-05-16 12:07:08,909 — [Nik] Deleted file → General/Boingo wireless/Installed Base/Boingo Covered IB Report Sept 2024.xlsb
+2025-05-16 12:07:09,376 — [Nik] Deleted file → General/Boingo wireless/Boingo wireless partner call - August 13 2024 .rtf
+2025-05-16 12:07:09,809 — [Nik] Deleted file → General/Boingo Covered IB Report Sept 2024.xlsb
+2025-05-16 12:09:46,751 — [Nik] Uploaded file → General/Boingo wireless/Boingo wireless partner call - August 13 2024 .rtf
+2025-05-16 12:09:46,754 — [Nik] Uploaded file → General/Boingo wireless/Installed Base/Boingo Covered IB Report Sept 2024.xlsb
+2025-05-16 12:09:46,755 — [Nik] Uploaded file → General/Boingo wireless/.DS_Store
+2025-05-16 12:09:46,756 — [Nik] Uploaded file → General/Boingo wireless/Boingo- April 24th 2025.rtf
+2025-05-16 12:09:46,756 — [Nik] Uploaded file → General/Boingo wireless/Boingo Software Assets WWT 8 14 2024.xlsx
+2025-05-16 12:09:46,757 — [Nik] Uploaded file → General/Boingo wireless/Boingo-Marco-ISE call - April21st.rtf
+2025-05-16 12:09:46,757 — [Nik] Uploaded file → General/Boingo wireless/Boing - Wifi call - April 30th.rtf
+2025-05-16 12:09:46,758 — [Nik] Uploaded file → General/Boingo wireless/Boingo - introduction - August 20th 2024.rtf
+2025-05-16 12:09:46,758 — [Nik] Uploaded file → General/Boingo wireless/Boingo-providence-airport.rtf
+2025-05-16 12:09:46,762 — [Nik] Uploaded file → General/Boingo wireless/competitors/Aruba_Ruckus_Extreme_WiFi_Comparison.jpg
+2025-05-16 12:13:32,979 — [Nik] Deleted file → General/Boingo wireless/competitors/Aruba_Ruckus_Extreme_WiFi_Comparison.jpg

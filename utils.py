@@ -9,11 +9,7 @@ import time
 import getpass
 
 from config import (
-    DISCOVERY_ROOT,
-    SKIP_FOLDERS,
     UPLOAD_FOLDER,
-    ONEDRIVE_PATH,
-    BACKUP_SHARED_DIR,
     BACKUP_LOCAL_DIR,
     DATABASE_PATH,
     LOCK_FILE,
@@ -185,31 +181,11 @@ def sync_customer_files_logic(customer_id):
                 logger.error(f"⚠️ Could not clean {folder_path}: {e}")
 
 
-def scan_and_index_files():
-    FileIndex.query.delete()  # optional: clean old entries
-    for root, _, files in os.walk(DISCOVERY_ROOT):
-        if any(skip in root for skip in SKIP_FOLDERS):
-            continue
-        for file in files:
-            if file.startswith("."):
-                continue
-            rel_path = os.path.relpath(os.path.join(root, file), DISCOVERY_ROOT)
-            parent = os.path.basename(os.path.dirname(os.path.join(root, file)))
-            db.session.add(
-                FileIndex(relative_path=rel_path, filename=file, parent_folder=parent)
-            )
-    db.session.commit()
-
-
 def daily_backup_if_needed():
     today = datetime.now().strftime("%Y%m%d")
 
-    if not os.path.exists(BACKUP_SHARED_DIR):
-        logger.warning(f"🚫 Backup skipped — shared backup folder not accessible: {BACKUP_SHARED_DIR}")
-        return
-
     try:
-        files = os.listdir(BACKUP_SHARED_DIR)
+        files = os.listdir(BACKUP_LOCAL_DIR)
         found = any(f.startswith(f"account_team_{today}") for f in files)
 
         if not found:
@@ -225,21 +201,16 @@ def daily_backup_if_needed():
 def backup_db_internal():
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     filename = f"account_team_{timestamp}.db"
-
-    shared_backup_path = os.path.join(BACKUP_SHARED_DIR, filename)
     local_backup_path = os.path.join(BACKUP_LOCAL_DIR, filename)
 
     try:
-        os.makedirs(BACKUP_SHARED_DIR, exist_ok=True)
         os.makedirs(BACKUP_LOCAL_DIR, exist_ok=True)
 
         with open(DATABASE_PATH, "rb") as src:
             data = src.read()
 
-        with open(shared_backup_path, "wb") as f1:
-            f1.write(data)
-        with open(local_backup_path, "wb") as f2:
-            f2.write(data)
+        with open(local_backup_path, "wb") as f:
+            f.write(data)
 
         logger.info(f"✅ Backup successful: {filename}")
         log_change("Backup created", f"{filename}")
@@ -248,47 +219,36 @@ def backup_db_internal():
         logger.error(f"❌ Backup failed: {e}")
 
 
-# === Check last backup ===
-
-
 def get_last_backup_times():
-    last_shared = None
     last_local = None
 
     try:
-        shared_files = [
-            f for f in os.listdir(BACKUP_SHARED_DIR) if f.startswith("account_team_")
-        ]
         local_files = [
             f for f in os.listdir(BACKUP_LOCAL_DIR) if f.startswith("account_team_")
         ]
-        if shared_files:
-            shared_files.sort(reverse=True)
-            last_shared = shared_files[0]
-
         if local_files:
             local_files.sort(reverse=True)
             last_local = local_files[0]
+
         def extract_dt(filename):
             try:
-                # Grab the part between 'account_team_' and '.db'
                 ts = filename.replace("account_team_", "").replace(".db", "")
                 return datetime.strptime(ts, "%Y%m%d_%H%M%S")
             except:
                 return None
 
         return {
-            "shared": extract_dt(last_shared) if last_shared else None,
             "local": extract_dt(last_local) if last_local else None
         }
 
     except Exception as e:
-        return {"shared": None, "local": None}
+        return {"local": None}
 
 
 #= Logging setup ===
-CHANGE_LOG_FILE = os.path.join(ONEDRIVE_PATH, "APP", "change_log.txt")
+CHANGE_LOG_FILE = os.path.join("logs", "change_log.txt")
 log_dir = os.path.dirname(CHANGE_LOG_FILE)
+os.makedirs(log_dir, exist_ok=True)
 
 logger = logging.getLogger("crm_logger")
 logger.setLevel(logging.INFO)
@@ -351,74 +311,6 @@ def lock_expired(timeout_sec=300):
     age = time.time() - os.path.getmtime(LOCK_FILE)
     return age > timeout_sec
 
-# ----- SCAN FILES TWICE A DAY
-file_scan_cache = {
-    "date": None,
-    "scanned_11": False,
-    "scanned_16": False,
-    "count": 0
-}
-
-def get_new_files_today_count(DISCOVERY_ROOT, SKIP_FOLDERS):
-    now = datetime.now()
-    today = now.date()
-    hour = now.hour
-
-    # Reset at midnight
-    if file_scan_cache["date"] != today:
-        logger.info("🕛 New day detected. Resetting file scan cache.")
-        file_scan_cache.update({
-            "date": today,
-            "scanned_11": False,
-            "scanned_16": False,
-            "count": 0
-        })
-
-    # Determine if we are in a scan window
-    should_scan = False
-    scan_window = None
-
-    if 11 <= hour < 16 and not file_scan_cache["scanned_11"]:
-        should_scan = True
-        scan_window = "11AM"
-    elif 16 <= hour <= 23 and not file_scan_cache["scanned_16"]:
-        should_scan = True
-        scan_window = "4PM"
-
-    if not should_scan:
-        return file_scan_cache["count"]
-
-    # ✅ Perform scan
-    try:
-        count = 0
-        for root, _, files in os.walk(DISCOVERY_ROOT):
-            if any(skip in root for skip in SKIP_FOLDERS):
-                continue
-            for file in files:
-                if file.startswith("."):
-                    continue
-                full_path = os.path.join(root, file)
-                try:
-                    mod_time = os.path.getmtime(full_path)
-                    if datetime.fromtimestamp(mod_time).date() == today:
-                        count += 1
-                except FileNotFoundError:
-                    continue
-
-        file_scan_cache["count"] = count
-
-        # ✅ Now mark the appropriate scan window as completed
-        if scan_window == "11AM":
-            file_scan_cache["scanned_11"] = True
-        elif scan_window == "4PM":
-            file_scan_cache["scanned_16"] = True
-
-        logger.info(f"📂 File scan completed at {scan_window}: {count} new files found.")
-        return count
-
-    except Exception as e:
-        logger.warning(f"⚠️ File scan failed during {scan_window or 'unknown'} window: {e}")
-        return file_scan_cache["count"]  # fallback to last known value
 
 def get_device_name():
     return session.get("username", "UNKNOWN_USER")

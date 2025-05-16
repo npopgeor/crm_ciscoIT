@@ -58,11 +58,17 @@
         <!-- 🔻 Divider -->
         <hr class="my-4">
 
+    {# 
     <a class="nav-link badge-right" href="{{ url_for('all_files_by_customer') }}">
       📁 View All Files
       {% if new_files_today_count > 0 %}
         <span class="badge bg-success ms-2">{{ new_files_today_count }} new</span>
       {% endif %}
+    </a>
+    #} 
+
+    <a class="nav-link badge-right" href="{{ url_for('files') }}">
+      📁 Files
     </a>
 
     <a class="nav-link" href="{{ url_for('links') }}">

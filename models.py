@@ -215,7 +215,6 @@ class DivisionDocument(db.Model):
     division_id = db.Column(db.Integer, db.ForeignKey("division.id"), nullable=False)
     filename = db.Column(db.String(200), nullable=False)
     uploaded_at = db.Column(db.DateTime, default=datetime.utcnow)
-
     division = db.relationship("Division", backref="documents")
 
 

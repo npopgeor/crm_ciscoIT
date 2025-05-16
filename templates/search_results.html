@@ -75,24 +75,24 @@
 
 
 <!-- File and Folder Matches -->
-<h4>📄 Files & Folders</h4>
+<h4>📄 Files</h4>
 {% if file_name_hits %}
   <ul class="list-group mb-4">
-    {% for path in file_name_hits %}
-      <li class="list-group-item">
-        {% if path.endswith('/') %}
-          <strong>📁 {{ path }}</strong>  {# Folder - plain text #}
-        {% else %}
-          <a href="{{ url_for('serve_from_onedrive', filename=path) }}" target="_blank">
-            {{ path }}
-          </a>
+    {% for file in file_name_hits %}
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <a href="{{ url_for('uploaded_file', filename=file.filename) }}" target="_blank">
+          {{ file.filename }}
+        </a>
+        {% if file.timestamp %}
+          <small class="text-muted ms-2">{{ file.timestamp.strftime('%b %d, %Y %H:%M') }}</small>
         {% endif %}
       </li>
     {% endfor %}
   </ul>
 {% else %}
-  <p class="text-muted">No matching files or folders found.</p>
+  <p class="text-muted">No matching files found.</p>
 {% endif %}
+
 
 <!-- Links -->
 <h4>🔗 Links</h4>

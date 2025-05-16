@@ -1,0 +1,63 @@
+{% extends 'layout.html' %}
+{% block content %}
+<h2 class="mb-4">📤 Upload New Files</h2>
+
+<form method="post" enctype="multipart/form-data">
+  <div class="mb-3">
+    <label for="customer_id" class="form-label">Assign to Customer (optional):</label>
+    <select name="customer_id" id="customer_id" class="form-select">
+      <option value="">General</option>
+      {% for cust in customers %}
+        <option value="{{ cust.id }}">{{ cust.name }}</option>
+      {% endfor %}
+    </select>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Upload Individual Files:</label><br>
+
+    <!-- Individual/multiple file upload -->
+    <input type="file" name="files" id="fileInput" multiple class="form-control mb-2">
+
+        <label class="form-label">Upload Folders:</label><br>
+
+    <!-- Folder upload (preserves subfolders) -->
+    <input type="file" name="folder_files" id="folderInput" multiple webkitdirectory directory class="form-control mt-2">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Upload</button>
+  <a href="{{ url_for('files') }}" class="btn btn-secondary">Cancel</a>
+</form>
+
+
+<script>
+  const folderInput = document.getElementById("folderInput");
+  const form = document.getElementById("upload-form");
+  const hiddenFields = document.getElementById("hidden-fields");
+
+  folderInput.addEventListener("change", function () {
+    hiddenFields.innerHTML = ""; // Clear previous fields
+    for (let i = 0; i < folderInput.files.length; i++) {
+      const file = folderInput.files[i];
+
+      // Create a separate file input for each file
+      const fileInput = document.createElement("input");
+      fileInput.type = "file";
+      fileInput.name = "files";
+      fileInput.files = new DataTransfer().files;
+      new DataTransfer().items.add(file);
+      fileInput.files = new DataTransfer().files;
+      hiddenFields.appendChild(fileInput);
+
+      // Store relative path
+      const pathInput = document.createElement("input");
+      pathInput.type = "hidden";
+      pathInput.name = "relative_paths";
+      pathInput.value = file.webkitRelativePath || file.name;
+      hiddenFields.appendChild(pathInput);
+    }
+  });
+</script>
+
+
+{% endblock %}
