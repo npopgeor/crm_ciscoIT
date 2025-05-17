@@ -30,6 +30,7 @@ from config import (
     COLUMNS,
     DATABASE_PATH,
     USERS,
+    UPLOAD_FOLDER,
 
 )
 from extensions import db
@@ -69,6 +70,8 @@ from utils import (
     is_locked, 
     lock_info, 
     lock_expired,
+    get_new_files_today_count,
+    scan_and_cache,
 )
 
 
@@ -2180,8 +2183,8 @@ def inject_counts():
         "action_item_open_count": ActionItem.query.filter_by(completed=False).count(),
         "meeting_count": Meeting.query.count(),
         "recurring_meeting_count": RecurringMeeting.query.count(),
+        "new_files_today_count": get_new_files_today_count(UPLOAD_FOLDER)
     }
-
 
 @app.context_processor
 def inject_attachment_logic():
@@ -2515,6 +2518,7 @@ def unlock():
 def files():
     search_customer = request.args.get("customer")
     files_query = DivisionDocument.query.order_by(DivisionDocument.id.desc())
+    latest_file_count = scan_and_cache(UPLOAD_FOLDER, [], scan_flag=None, label="Manual")
 
     if search_customer:
         customer = Customer.query.filter_by(name=search_customer).first()
@@ -2539,7 +2543,8 @@ def files():
         grouped_files=grouped,
         customers=customers,
         selected_customer=search_customer,
-        recent_files=latest_files
+        recent_files=latest_files,
+        new_files_today_count=latest_file_count,
     )
 
 

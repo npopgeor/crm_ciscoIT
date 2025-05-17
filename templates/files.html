@@ -18,10 +18,10 @@
 
 <h5 class="mt-4">🆕 Recently Uploaded Files</h5>
 <ul class="list-group mb-4">
-  {% for file in recent_files %}
+{% for file in recent_files %}
+  {% if ".DS_Store" not in file.filename %}
     <li class="list-group-item">
       <div class="d-flex justify-content-between align-items-center flex-wrap">
-        <!-- Filename (clickable, truncates if too long) -->
         <div class="me-auto" style="max-width: 60%; overflow: hidden;">
           <a href="{{ url_for('uploaded_file', filename=file.filename) }}"
              target="_blank"
@@ -30,13 +30,9 @@
             {{ file.filename }}
           </a>
         </div>
-
-        <!-- Timestamp -->
         <div class="text-muted small text-nowrap mx-3">
           {{ file.uploaded_at.strftime('%b %d, %Y %H:%M') if file.uploaded_at else '—' }}
         </div>
-
-        <!-- Delete button -->
         <form method="post"
               action="{{ url_for('delete_file', file_id=file.id) }}"
               style="display: inline;">
@@ -44,7 +40,10 @@
         </form>
       </div>
     </li>
-  {% endfor %}
+  {% endif %}
+{% endfor %}
+
+  
 </ul>
 
 
@@ -60,15 +59,18 @@
     <div id="collapse_{{ group_id }}" class="collapse">
       <ul class="list-group">
         {% for file in files %}
-          <li class="list-group-item d-flex justify-content-between align-items-center">
-            <a href="{{ url_for('uploaded_file', filename=file.filename) }}" target="_blank">
-              {{ file.filename }}
-            </a>
-            <form method="post" action="{{ url_for('delete_file', file_id=file.id) }}" style="display:inline">
-              <button type="submit" class="btn btn-sm btn-outline-danger">🗑️</button>
-            </form>
-          </li>
+          {% if ".DS_Store" not in file.filename %}
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <a href="{{ url_for('uploaded_file', filename=file.filename) }}" target="_blank">
+                {{ file.filename }}
+              </a>
+              <form method="post" action="{{ url_for('delete_file', file_id=file.id) }}" style="display:inline">
+                <button type="submit" class="btn btn-sm btn-outline-danger">🗑️</button>
+              </form>
+            </li>
+          {% endif %}
         {% endfor %}
+
       </ul>
     </div>
   </div>

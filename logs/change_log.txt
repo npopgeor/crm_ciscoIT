@@ -155,3 +155,194 @@
 2025-05-16 12:09:46,758 — [Nik] Uploaded file → General/Boingo wireless/Boingo-providence-airport.rtf
 2025-05-16 12:09:46,762 — [Nik] Uploaded file → General/Boingo wireless/competitors/Aruba_Ruckus_Extreme_WiFi_Comparison.jpg
 2025-05-16 12:13:32,979 — [Nik] Deleted file → General/Boingo wireless/competitors/Aruba_Ruckus_Extreme_WiFi_Comparison.jpg
+2025-05-16 16:29:47,111 — 📝 File logging initialized.
+2025-05-16 16:39:27,676 — 📝 File logging initialized.
+2025-05-16 16:40:29,249 — 📝 File logging initialized.
+2025-05-16 16:40:51,514 — 📝 File logging initialized.
+2025-05-16 16:41:15,769 — 📝 File logging initialized.
+2025-05-16 16:41:47,079 — 📝 File logging initialized.
+2025-05-16 16:42:34,508 — 📝 File logging initialized.
+2025-05-16 16:43:53,188 — 📝 File logging initialized.
+2025-05-16 16:44:58,796 — 📝 File logging initialized.
+2025-05-16 16:45:45,234 — 📝 File logging initialized.
+2025-05-16 16:47:01,530 — 🕛 New day detected. Resetting file scan cache.
+2025-05-16 16:47:01,534 — 📂 File scan at 4PM: 8 new files today.
+2025-05-16 16:47:29,091 — [Nik] Uploaded file → Roblox/Roblox/roblox - Leo.rtf
+2025-05-16 16:47:29,143 — [Nik] Uploaded file → Roblox/Roblox/Cisco_8K_Roblox_BR_v1.pptx
+2025-05-16 16:47:29,148 — [Nik] Uploaded file → Roblox/Roblox/nexus team to help.png
+2025-05-16 16:47:29,149 — [Nik] Uploaded file → Roblox/Roblox/.DS_Store
+2025-05-16 16:47:29,150 — [Nik] Uploaded file → Roblox/Roblox/DCO Alan Liew/Roblox Device Automation Requirements.xlsx
+2025-05-16 16:47:29,151 — [Nik] Uploaded file → Roblox/Roblox/roblox - April 28th 2025.rtf
+2025-05-16 16:47:29,151 — [Nik] Uploaded file → Roblox/Roblox/April 20th.txt
+2025-05-16 16:47:29,152 — [Nik] Uploaded file → Roblox/Roblox/roblox - mon 29th 2024.rtf
+2025-05-16 16:47:29,153 — [Nik] Uploaded file → Roblox/Roblox/roblox-April 1st.rtf
+2025-05-16 16:47:29,155 — [Nik] Uploaded file → Roblox/Roblox/roblox - nexus - scale.xlsx
+2025-05-16 16:47:29,158 — [Nik] Uploaded file → Roblox/Roblox/fabric.docx
+2025-05-16 16:47:29,159 — [Nik] Uploaded file → Roblox/Roblox/Isovalent Gary and Alex to connect - RE Roblox  - April30th.rtf
+2025-05-16 16:47:29,159 — [Nik] Uploaded file → Roblox/Roblox/Roblox & Cisco - Enhancements_TAC Cases_Bugs.xlsx
+2025-05-16 16:47:29,160 — [Nik] Uploaded file → Roblox/Roblox/ISSU related/Roblox-ISSU on Nexus - 4-10-2024.pdf
+2025-05-16 16:47:29,160 — [Nik] Uploaded file → Roblox/Roblox/ISSU related/Roblox-ISSU on Nexus - 4-11-24.docx
+2025-05-16 16:47:29,161 — [Nik] Uploaded file → Roblox/Roblox/ISSU related/Roblox-ISSU on Nexus - 4-11-24.pdf
+2025-05-16 16:47:29,162 — [Nik] Uploaded file → Roblox/Roblox/ISSU related/Roblox-ISSU on Nexus.docx
+2025-05-16 16:47:29,163 — [Nik] Uploaded file → Roblox/Roblox/Roblox Cisco as backbone idea/Roblox - april 4 - 2025.rtf
+2025-05-16 16:47:29,172 — [Nik] Uploaded file → Roblox/Roblox/Roblox Cisco as backbone idea/Cisco_8K_Roblox_BR_v1.pdf
+2025-05-16 16:47:29,176 — [Nik] Uploaded file → Roblox/Roblox/Roblox Cisco as backbone idea/Roblox POP network.png
+2025-05-16 16:47:29,177 — [Nik] Uploaded file → Roblox/Roblox/Roblox.rtf
+2025-05-16 16:47:29,177 — [Nik] Uploaded file → Roblox/Roblox/Roblox viasat internal - DC border device - August 16th 2024.rtf
+2025-05-16 16:47:29,178 — [Nik] Uploaded file → Roblox/Roblox/Roblox - diff meeting - April 3rd 2024 .rtf
+2025-05-16 16:47:29,179 — [Nik] Uploaded file → Roblox/Roblox/Installed base and renewal dates/Roblox Nexus IB.xlsx
+2025-05-16 16:47:29,180 — [Nik] Uploaded file → Roblox/Roblox/QoS project - David /ToR_DC1_1_Aug21.log
+2025-05-16 16:47:29,180 — [Nik] Uploaded file → Roblox/Roblox/QoS project - David /PS-9300-1_Aug21.log
+2025-05-16 16:47:29,181 — [Nik] Uploaded file → Roblox/Roblox/Roblox - weeklly meeting - Sep 16.rtf
+2025-05-16 16:47:29,183 — [Nik] Uploaded file → Roblox/Roblox/Nexus route scale - April 2nd 2024.xlsx
+2025-05-16 16:47:29,184 — [Nik] Uploaded file → Roblox/Roblox/roblox-optics-april 14.rtf
+2025-05-16 16:47:29,185 — [Nik] Uploaded file → Roblox/Roblox/roblox-june7th.rtf
+2025-05-16 16:47:29,201 — [Nik] Uploaded file → Roblox/Roblox/Screenshot 2024-06-07 at 10.09.19 AM.png
+2025-05-16 16:47:29,202 — [Nik] Uploaded file → Roblox/Roblox/Roblox - router:catalyst for DWDM - August 15th 2024.rtf
+2025-05-16 16:47:29,203 — [Nik] Uploaded file → Roblox/Roblox/5700 and 8000 quote/7311748_6_Roblox- Cisco Request.pdf
+2025-05-16 16:47:29,203 — [Nik] Uploaded file → Roblox/Roblox/Bug scrubs/.DS_Store
+2025-05-16 16:47:29,207 — [Nik] Uploaded file → Roblox/Roblox/Bug scrubs/10.3.4a/Roblox_N9k_10.3(4a)_Bug_Scrub_ Report.pdf
+2025-05-16 16:47:29,208 — [Nik] Uploaded file → Roblox/Roblox/roblox- march 24th 2024.rtfd/TXT.rtf
+2025-05-16 16:47:29,209 — [Nik] Uploaded file → Roblox/Roblox/roblox- march 24th 2024.rtfd/Pasted Graphic.png
+2025-05-16 16:47:29,226 — [Nik] Uploaded file → Roblox/Roblox/AI discussion/Cisco AI DC Network_BP_CVD_v2.pdf
+2025-05-16 16:47:29,226 — [Nik] Uploaded file → Roblox/Roblox/isovelent-Alex - Roblox 30 April 20225.rtf
+2025-05-16 16:47:29,227 — [Nik] Uploaded file → Roblox/Roblox/demo depot/Bailey Demo Depot - September 16.xls
+2025-05-16 16:47:29,228 — [Nik] Uploaded file → Roblox/Roblox/Nexus scale numebrs/9300GX2A_template.xlsx
+2025-05-16 16:47:29,228 — [Nik] Uploaded file → Roblox/Roblox/Nexus scale numebrs/9300GX2B_template.xlsx
+2025-05-16 16:47:29,229 — [Nik] Uploaded file → Roblox/Roblox/Nexus scale numebrs/Roblox_400G_test_plan.pdf
+2025-05-16 16:50:34,749 — 📝 File logging initialized.
+2025-05-16 16:51:28,383 — 📝 File logging initialized.
+2025-05-16 16:52:02,597 — 📝 File logging initialized.
+2025-05-16 16:52:57,828 — 📝 File logging initialized.
+2025-05-16 16:53:08,919 — 📝 File logging initialized.
+2025-05-16 16:56:03,088 — 📝 File logging initialized.
+2025-05-16 16:56:47,432 — 📝 File logging initialized.
+2025-05-16 16:57:42,516 — 📝 File logging initialized.
+2025-05-16 17:00:09,265 — 📝 File logging initialized.
+2025-05-16 17:00:09,915 — 📝 File logging initialized.
+2025-05-16 17:00:14,717 — 📂 File scan (Manual): 49 new files today.
+2025-05-16 17:00:14,771 — 🕛 New day detected. Resetting file scan cache.
+2025-05-16 17:00:14,775 — 📂 File scan (4PM): 49 new files today.
+2025-05-16 17:00:17,365 — 📂 File scan (Manual): 49 new files today.
+2025-05-16 17:00:19,453 — [Nik] Deleted file → Roblox/Roblox/Nexus scale numebrs/Roblox_400G_test_plan.pdf
+2025-05-16 17:00:19,459 — 📂 File scan (Manual): 48 new files today.
+2025-05-16 17:00:19,782 — [Nik] Deleted file → Roblox/Roblox/Nexus scale numebrs/9300GX2B_template.xlsx
+2025-05-16 17:00:19,789 — 📂 File scan (Manual): 47 new files today.
+2025-05-16 17:00:20,083 — [Nik] Deleted file → Roblox/Roblox/Nexus scale numebrs/9300GX2A_template.xlsx
+2025-05-16 17:00:20,092 — 📂 File scan (Manual): 46 new files today.
+2025-05-16 17:00:20,364 — [Nik] Deleted file → Roblox/Roblox/demo depot/Bailey Demo Depot - September 16.xls
+2025-05-16 17:00:20,370 — 📂 File scan (Manual): 45 new files today.
+2025-05-16 17:00:20,799 — [Nik] Deleted file → Roblox/Roblox/isovelent-Alex - Roblox 30 April 20225.rtf
+2025-05-16 17:00:20,805 — 📂 File scan (Manual): 44 new files today.
+2025-05-16 17:00:21,100 — [Nik] Deleted file → Roblox/Roblox/AI discussion/Cisco AI DC Network_BP_CVD_v2.pdf
+2025-05-16 17:00:21,109 — 📂 File scan (Manual): 43 new files today.
+2025-05-16 17:00:21,417 — [Nik] Deleted file → Roblox/Roblox/roblox- march 24th 2024.rtfd/Pasted Graphic.png
+2025-05-16 17:00:21,425 — 📂 File scan (Manual): 42 new files today.
+2025-05-16 17:00:21,715 — [Nik] Deleted file → Roblox/Roblox/roblox- march 24th 2024.rtfd/TXT.rtf
+2025-05-16 17:00:21,721 — 📂 File scan (Manual): 41 new files today.
+2025-05-16 17:00:22,034 — [Nik] Deleted file → Roblox/Roblox/Bug scrubs/10.3.4a/Roblox_N9k_10.3(4a)_Bug_Scrub_ Report.pdf
+2025-05-16 17:00:22,043 — 📂 File scan (Manual): 40 new files today.
+2025-05-16 17:00:22,364 — [Nik] Deleted file → Roblox/Roblox/Bug scrubs/.DS_Store
+2025-05-16 17:00:22,370 — 📂 File scan (Manual): 40 new files today.
+2025-05-16 17:00:22,699 — [Nik] Deleted file → Roblox/Roblox/5700 and 8000 quote/7311748_6_Roblox- Cisco Request.pdf
+2025-05-16 17:00:22,705 — 📂 File scan (Manual): 39 new files today.
+2025-05-16 17:00:23,082 — [Nik] Deleted file → Roblox/Roblox/Roblox - router:catalyst for DWDM - August 15th 2024.rtf
+2025-05-16 17:00:23,088 — 📂 File scan (Manual): 38 new files today.
+2025-05-16 17:00:38,314 — 📂 File scan (Manual): 8 new files today.
+2025-05-16 17:00:45,481 — 📂 File scan (Manual): 8 new files today.
+2025-05-16 17:00:49,947 — 📂 File scan (Manual): 8 new files today.
+2025-05-16 17:00:50,496 — 📂 File scan (Manual): 8 new files today.
+2025-05-16 17:01:01,933 — [Nik] Deleted file → Roblox/Roblox/Screenshot 2024-06-07 at 10.09.19 AM.png
+2025-05-16 17:01:01,938 — 📂 File scan (Manual): 8 new files today.
+2025-05-16 17:01:02,263 — [Nik] Deleted file → Roblox/Roblox/roblox-june7th.rtf
+2025-05-16 17:01:02,272 — 📂 File scan (Manual): 8 new files today.
+2025-05-16 17:01:02,513 — [Nik] Deleted file → Roblox/Roblox/roblox-optics-april 14.rtf
+2025-05-16 17:01:02,517 — 📂 File scan (Manual): 8 new files today.
+2025-05-16 17:01:02,814 — [Nik] Deleted file → Roblox/Roblox/Nexus route scale - April 2nd 2024.xlsx
+2025-05-16 17:01:02,818 — 📂 File scan (Manual): 8 new files today.
+2025-05-16 17:01:03,117 — [Nik] Deleted file → Roblox/Roblox/Roblox - weeklly meeting - Sep 16.rtf
+2025-05-16 17:01:03,125 — 📂 File scan (Manual): 8 new files today.
+2025-05-16 17:01:03,431 — [Nik] Deleted file → Roblox/Roblox/QoS project - David /PS-9300-1_Aug21.log
+2025-05-16 17:01:03,435 — 📂 File scan (Manual): 8 new files today.
+2025-05-16 17:01:03,749 — [Nik] Deleted file → Roblox/Roblox/QoS project - David /ToR_DC1_1_Aug21.log
+2025-05-16 17:01:03,754 — 📂 File scan (Manual): 8 new files today.
+2025-05-16 17:01:04,081 — [Nik] Deleted file → Roblox/Roblox/Installed base and renewal dates/Roblox Nexus IB.xlsx
+2025-05-16 17:01:04,086 — 📂 File scan (Manual): 8 new files today.
+2025-05-16 17:01:04,399 — [Nik] Deleted file → Roblox/Roblox/Roblox - diff meeting - April 3rd 2024 .rtf
+2025-05-16 17:01:04,404 — 📂 File scan (Manual): 8 new files today.
+2025-05-16 17:01:04,714 — [Nik] Deleted file → Roblox/Roblox/Roblox viasat internal - DC border device - August 16th 2024.rtf
+2025-05-16 17:01:04,718 — 📂 File scan (Manual): 8 new files today.
+2025-05-16 17:01:05,033 — [Nik] Deleted file → Roblox/Roblox/Roblox.rtf
+2025-05-16 17:01:05,037 — 📂 File scan (Manual): 8 new files today.
+2025-05-16 17:01:05,365 — [Nik] Deleted file → Roblox/Roblox/Roblox Cisco as backbone idea/Roblox POP network.png
+2025-05-16 17:01:05,370 — 📂 File scan (Manual): 8 new files today.
+2025-05-16 17:01:05,733 — [Nik] Deleted file → Roblox/Roblox/Roblox Cisco as backbone idea/Cisco_8K_Roblox_BR_v1.pdf
+2025-05-16 17:01:05,741 — 📂 File scan (Manual): 8 new files today.
+2025-05-16 17:01:06,080 — [Nik] Deleted file → Roblox/Roblox/Roblox Cisco as backbone idea/Roblox - april 4 - 2025.rtf
+2025-05-16 17:01:06,085 — 📂 File scan (Manual): 8 new files today.
+2025-05-16 17:01:06,450 — [Nik] Deleted file → Roblox/Roblox/ISSU related/Roblox-ISSU on Nexus.docx
+2025-05-16 17:01:06,457 — 📂 File scan (Manual): 8 new files today.
+2025-05-16 17:01:06,648 — [Nik] Deleted file → Roblox/Roblox/ISSU related/Roblox-ISSU on Nexus - 4-11-24.pdf
+2025-05-16 17:01:06,654 — 📂 File scan (Manual): 8 new files today.
+2025-05-16 17:01:07,015 — [Nik] Deleted file → Roblox/Roblox/ISSU related/Roblox-ISSU on Nexus - 4-11-24.docx
+2025-05-16 17:01:07,020 — 📂 File scan (Manual): 8 new files today.
+2025-05-16 17:01:07,364 — [Nik] Deleted file → Roblox/Roblox/ISSU related/Roblox-ISSU on Nexus - 4-10-2024.pdf
+2025-05-16 17:01:07,368 — 📂 File scan (Manual): 8 new files today.
+2025-05-16 17:01:07,732 — [Nik] Deleted file → Roblox/Roblox/Roblox & Cisco - Enhancements_TAC Cases_Bugs.xlsx
+2025-05-16 17:01:07,736 — 📂 File scan (Manual): 8 new files today.
+2025-05-16 17:01:08,113 — [Nik] Deleted file → Roblox/Roblox/Isovalent Gary and Alex to connect - RE Roblox  - April30th.rtf
+2025-05-16 17:01:08,118 — 📂 File scan (Manual): 8 new files today.
+2025-05-16 17:01:08,433 — [Nik] Deleted file → Roblox/Roblox/fabric.docx
+2025-05-16 17:01:08,438 — 📂 File scan (Manual): 8 new files today.
+2025-05-16 17:01:08,764 — [Nik] Deleted file → Roblox/Roblox/roblox - nexus - scale.xlsx
+2025-05-16 17:01:08,769 — 📂 File scan (Manual): 8 new files today.
+2025-05-16 17:01:09,114 — [Nik] Deleted file → Roblox/Roblox/roblox-April 1st.rtf
+2025-05-16 17:01:09,119 — 📂 File scan (Manual): 8 new files today.
+2025-05-16 17:01:09,447 — [Nik] Deleted file → Roblox/Roblox/roblox - mon 29th 2024.rtf
+2025-05-16 17:01:09,452 — 📂 File scan (Manual): 8 new files today.
+2025-05-16 17:01:09,801 — [Nik] Deleted file → Roblox/Roblox/April 20th.txt
+2025-05-16 17:01:09,808 — 📂 File scan (Manual): 8 new files today.
+2025-05-16 17:01:10,164 — [Nik] Deleted file → Roblox/Roblox/roblox - April 28th 2025.rtf
+2025-05-16 17:01:10,169 — 📂 File scan (Manual): 8 new files today.
+2025-05-16 17:01:10,552 — [Nik] Deleted file → Roblox/Roblox/DCO Alan Liew/Roblox Device Automation Requirements.xlsx
+2025-05-16 17:01:10,558 — 📂 File scan (Manual): 8 new files today.
+2025-05-16 17:01:10,902 — [Nik] Deleted file → Roblox/Roblox/.DS_Store
+2025-05-16 17:01:10,910 — 📂 File scan (Manual): 8 new files today.
+2025-05-16 17:01:11,265 — [Nik] Deleted file → Roblox/Roblox/nexus team to help.png
+2025-05-16 17:01:11,270 — 📂 File scan (Manual): 8 new files today.
+2025-05-16 17:01:11,631 — [Nik] Deleted file → Roblox/Roblox/Cisco_8K_Roblox_BR_v1.pptx
+2025-05-16 17:01:11,636 — 📂 File scan (Manual): 8 new files today.
+2025-05-16 17:01:11,999 — [Nik] Deleted file → Roblox/Roblox/roblox - Leo.rtf
+2025-05-16 17:01:12,004 — 📂 File scan (Manual): 8 new files today.
+2025-05-16 17:01:12,381 — [Nik] Deleted file → General/Boingo wireless/Boingo-providence-airport.rtf
+2025-05-16 17:01:12,386 — 📂 File scan (Manual): 7 new files today.
+2025-05-16 17:01:12,733 — [Nik] Deleted file → General/Boingo wireless/Boingo - introduction - August 20th 2024.rtf
+2025-05-16 17:01:12,738 — 📂 File scan (Manual): 6 new files today.
+2025-05-16 17:01:12,915 — [Nik] Deleted file → General/Boingo wireless/Boing - Wifi call - April 30th.rtf
+2025-05-16 17:01:12,920 — 📂 File scan (Manual): 5 new files today.
+2025-05-16 17:01:13,082 — [Nik] Deleted file → General/Boingo wireless/Boingo-Marco-ISE call - April21st.rtf
+2025-05-16 17:01:13,087 — 📂 File scan (Manual): 4 new files today.
+2025-05-16 17:01:13,265 — [Nik] Deleted file → General/Boingo wireless/Boingo Software Assets WWT 8 14 2024.xlsx
+2025-05-16 17:01:13,271 — 📂 File scan (Manual): 3 new files today.
+2025-05-16 17:01:13,598 — [Nik] Deleted file → General/Boingo wireless/Boingo- April 24th 2025.rtf
+2025-05-16 17:01:13,603 — 📂 File scan (Manual): 2 new files today.
+2025-05-16 17:01:13,770 — [Nik] Deleted file → General/Boingo wireless/.DS_Store
+2025-05-16 17:01:13,775 — 📂 File scan (Manual): 2 new files today.
+2025-05-16 17:01:13,914 — [Nik] Deleted file → General/Boingo wireless/Installed Base/Boingo Covered IB Report Sept 2024.xlsb
+2025-05-16 17:01:13,919 — 📂 File scan (Manual): 1 new files today.
+2025-05-16 17:01:14,064 — [Nik] Deleted file → General/Boingo wireless/Boingo wireless partner call - August 13 2024 .rtf
+2025-05-16 17:01:14,069 — 📂 File scan (Manual): 0 new files today.
+2025-05-16 17:04:22,929 — 📂 File scan (Manual): 0 new files today.
+2025-05-16 17:04:24,545 — 📂 File scan (Manual): 0 new files today.
+2025-05-16 17:04:52,259 — [Nik] Uploaded file → Boingo/Boingo wireless/Boingo wireless partner call - August 13 2024 .rtf
+2025-05-16 17:04:52,262 — [Nik] Uploaded file → Boingo/Boingo wireless/Installed Base/Boingo Covered IB Report Sept 2024.xlsb
+2025-05-16 17:04:52,263 — [Nik] Uploaded file → Boingo/Boingo wireless/.DS_Store
+2025-05-16 17:04:52,263 — [Nik] Uploaded file → Boingo/Boingo wireless/Boingo- April 24th 2025.rtf
+2025-05-16 17:04:52,264 — [Nik] Uploaded file → Boingo/Boingo wireless/Boingo Software Assets WWT 8 14 2024.xlsx
+2025-05-16 17:04:52,265 — [Nik] Uploaded file → Boingo/Boingo wireless/Boingo-Marco-ISE call - April21st.rtf
+2025-05-16 17:04:52,265 — [Nik] Uploaded file → Boingo/Boingo wireless/Boing - Wifi call - April 30th.rtf
+2025-05-16 17:04:52,266 — [Nik] Uploaded file → Boingo/Boingo wireless/Boingo - introduction - August 20th 2024.rtf
+2025-05-16 17:04:52,266 — [Nik] Uploaded file → Boingo/Boingo wireless/Boingo-providence-airport.rtf
+2025-05-16 17:04:52,271 — [Nik] Uploaded file → Boingo/Boingo wireless/competitors/Aruba_Ruckus_Extreme_WiFi_Comparison.jpg
+2025-05-16 17:04:52,282 — 📂 File scan (Manual): 9 new files today.
+2025-05-16 17:07:05,731 — 📂 File scan (Manual): 9 new files today.

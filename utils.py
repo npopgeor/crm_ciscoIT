@@ -2,7 +2,7 @@ import logging
 from logging.handlers import RotatingFileHandler
 import os
 from threading import Thread
-from datetime import datetime
+from datetime import datetime, date
 from flask import session
 
 import time
@@ -314,3 +314,72 @@ def lock_expired(timeout_sec=300):
 
 def get_device_name():
     return session.get("username", "UNKNOWN_USER")
+
+
+# Cache to track file scan state across the day
+file_scan_cache = {
+    "date": None,
+    "scanned_11": False,
+    "scanned_16": False,
+    "count": 0
+}
+
+
+
+def scan_and_cache(upload_folder, skip_folders, scan_flag=None, label="Manual"):
+    """Scans upload folder and optionally caches result for current window."""
+    try:
+        count = 0
+        today = date.today()
+
+        for root, _, files in os.walk(upload_folder):
+            if any(skip in root for skip in skip_folders):
+                continue
+            for file in files:
+                if file.startswith("."):
+                    continue
+                full_path = os.path.join(root, file)
+                try:
+                    mod_time = os.path.getmtime(full_path)
+                    if datetime.fromtimestamp(mod_time).date() == today:
+                        count += 1
+                except FileNotFoundError:
+                    continue
+
+        if scan_flag:  # update cache only if part of time window logic
+            file_scan_cache["count"] = count
+            file_scan_cache[scan_flag] = True
+        logger.info(f"📂 File scan ({label}): {count} new files today.")
+        return count
+
+    except Exception as e:
+        logger.warning(f"⚠️ File scan failed during {label}: {e}")
+        return file_scan_cache["count"]
+
+
+def get_new_files_today_count(upload_folder, skip_folders=None):
+    """Returns number of files modified today. Scans only at 11AM and 4PM."""
+    if skip_folders is None:
+        skip_folders = []
+
+    now = datetime.now()
+    today = now.date()
+    hour = now.hour
+
+    # 🔁 Reset cache if a new day has started
+    if file_scan_cache["date"] != today:
+        logger.info("🕛 New day detected. Resetting file scan cache.")
+        file_scan_cache.update({
+            "date": today,
+            "scanned_11": False,
+            "scanned_16": False,
+            "count": 0
+        })
+
+    # 🕒 Decide if we need to scan
+    if 11 <= hour < 16 and not file_scan_cache["scanned_11"]:
+        return scan_and_cache(upload_folder, skip_folders, "scanned_11", "11AM")
+    elif 16 <= hour < 24 and not file_scan_cache["scanned_16"]:
+        return scan_and_cache(upload_folder, skip_folders, "scanned_16", "4PM")
+    else:
+        return file_scan_cache["count"]
