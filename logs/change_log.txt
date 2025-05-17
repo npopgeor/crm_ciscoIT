@@ -346,3 +346,160 @@
 2025-05-16 17:04:52,271 — [Nik] Uploaded file → Boingo/Boingo wireless/competitors/Aruba_Ruckus_Extreme_WiFi_Comparison.jpg
 2025-05-16 17:04:52,282 — 📂 File scan (Manual): 9 new files today.
 2025-05-16 17:07:05,731 — 📂 File scan (Manual): 9 new files today.
+2025-05-16 17:08:36,888 — ⚠️ Unlock blocked: session does not own the lock
+2025-05-16 17:08:39,661 — 📂 File scan (Manual): 9 new files today.
+2025-05-16 17:08:42,447 — [Nik] Deleted file → Boingo/Boingo wireless/competitors/Aruba_Ruckus_Extreme_WiFi_Comparison.jpg
+2025-05-16 17:08:42,452 — 📂 File scan (Manual): 8 new files today.
+2025-05-16 17:08:42,630 — [Nik] Deleted file → Boingo/Boingo wireless/Boingo-providence-airport.rtf
+2025-05-16 17:08:42,635 — 📂 File scan (Manual): 7 new files today.
+2025-05-16 17:08:42,815 — [Nik] Deleted file → Boingo/Boingo wireless/Boingo - introduction - August 20th 2024.rtf
+2025-05-16 17:08:42,819 — 📂 File scan (Manual): 6 new files today.
+2025-05-16 17:08:42,982 — [Nik] Deleted file → Boingo/Boingo wireless/Boing - Wifi call - April 30th.rtf
+2025-05-16 17:08:42,987 — 📂 File scan (Manual): 5 new files today.
+2025-05-16 17:08:43,134 — [Nik] Deleted file → Boingo/Boingo wireless/Boingo-Marco-ISE call - April21st.rtf
+2025-05-16 17:08:43,138 — 📂 File scan (Manual): 4 new files today.
+2025-05-16 17:08:43,300 — [Nik] Deleted file → Boingo/Boingo wireless/Boingo Software Assets WWT 8 14 2024.xlsx
+2025-05-16 17:08:43,305 — 📂 File scan (Manual): 3 new files today.
+2025-05-16 17:08:43,480 — [Nik] Deleted file → Boingo/Boingo wireless/Boingo- April 24th 2025.rtf
+2025-05-16 17:08:43,485 — 📂 File scan (Manual): 2 new files today.
+2025-05-16 17:08:43,669 — [Nik] Deleted file → Boingo/Boingo wireless/Installed Base/Boingo Covered IB Report Sept 2024.xlsb
+2025-05-16 17:08:43,673 — 📂 File scan (Manual): 1 new files today.
+2025-05-16 17:08:43,814 — [Nik] Deleted file → Boingo/Boingo wireless/Boingo wireless partner call - August 13 2024 .rtf
+2025-05-16 17:08:43,819 — 📂 File scan (Manual): 0 new files today.
+2025-05-16 17:08:48,179 — 📂 File scan (Manual): 0 new files today.
+2025-05-16 17:08:55,928 — 📂 File scan (Manual): 0 new files today.
+2025-05-16 17:09:02,863 — 📂 File scan (Manual): 0 new files today.
+2025-05-16 17:10:23,893 — 📝 File logging initialized.
+2025-05-16 17:10:49,940 — 📝 File logging initialized.
+2025-05-16 17:10:52,658 — 📂 File scan (Manual): 0 new files today.
+2025-05-16 17:10:52,703 — 🕛 New day detected. Resetting file scan cache.
+2025-05-16 17:10:52,704 — 📂 File scan (4PM): 0 new files today.
+2025-05-16 17:10:57,175 — 📂 File scan (Manual): 0 new files today.
+2025-05-16 17:11:00,475 — 📂 File scan (Manual): 0 new files today.
+2025-05-16 17:13:47,384 — 📝 File logging initialized.
+2025-05-16 17:13:49,038 — 📂 File scan (Manual): 0 new files today.
+2025-05-16 17:13:49,080 — 🕛 New day detected. Resetting file scan cache.
+2025-05-16 17:13:49,081 — 📂 File scan (4PM): 0 new files today.
+2025-05-16 17:13:50,440 — 📂 File scan (Manual): 0 new files today.
+2025-05-16 17:14:17,516 — 📂 File scan (Manual): 0 new files today.
+2025-05-16 17:14:31,542 — [Nik] Uploaded file → General/Boingo wireless/Boingo wireless partner call - August 13 2024 .rtf
+2025-05-16 17:14:31,545 — [Nik] Uploaded file → General/Boingo wireless/Installed Base/Boingo Covered IB Report Sept 2024.xlsb
+2025-05-16 17:14:31,546 — [Nik] Uploaded file → General/Boingo wireless/.DS_Store
+2025-05-16 17:14:31,547 — [Nik] Uploaded file → General/Boingo wireless/Boingo- April 24th 2025.rtf
+2025-05-16 17:14:31,547 — [Nik] Uploaded file → General/Boingo wireless/Boingo Software Assets WWT 8 14 2024.xlsx
+2025-05-16 17:14:31,548 — [Nik] Uploaded file → General/Boingo wireless/Boingo-Marco-ISE call - April21st.rtf
+2025-05-16 17:14:31,549 — [Nik] Uploaded file → General/Boingo wireless/Boing - Wifi call - April 30th.rtf
+2025-05-16 17:14:31,549 — [Nik] Uploaded file → General/Boingo wireless/Boingo - introduction - August 20th 2024.rtf
+2025-05-16 17:14:31,550 — [Nik] Uploaded file → General/Boingo wireless/Boingo-providence-airport.rtf
+2025-05-16 17:14:31,553 — [Nik] Uploaded file → General/Boingo wireless/competitors/Aruba_Ruckus_Extreme_WiFi_Comparison.jpg
+2025-05-16 17:14:31,566 — 📂 File scan (Manual): 9 new files today.
+2025-05-16 17:14:38,537 — [Nik] Deleted file → General/Boingo wireless/competitors/Aruba_Ruckus_Extreme_WiFi_Comparison.jpg
+2025-05-16 17:14:38,539 — 📂 File scan (Post-Delete Refresh): 8 new files today.
+2025-05-16 17:14:38,544 — 📂 File scan (Manual): 8 new files today.
+2025-05-16 17:14:38,884 — [Nik] Deleted file → General/Boingo wireless/Boingo-providence-airport.rtf
+2025-05-16 17:14:38,885 — 📂 File scan (Post-Delete Refresh): 7 new files today.
+2025-05-16 17:14:38,890 — 📂 File scan (Manual): 7 new files today.
+2025-05-16 17:14:39,185 — [Nik] Deleted file → General/Boingo wireless/Boingo - introduction - August 20th 2024.rtf
+2025-05-16 17:14:39,186 — 📂 File scan (Post-Delete Refresh): 6 new files today.
+2025-05-16 17:14:39,191 — 📂 File scan (Manual): 6 new files today.
+2025-05-16 17:14:39,485 — [Nik] Deleted file → General/Boingo wireless/Boing - Wifi call - April 30th.rtf
+2025-05-16 17:14:39,486 — 📂 File scan (Post-Delete Refresh): 5 new files today.
+2025-05-16 17:14:39,491 — 📂 File scan (Manual): 5 new files today.
+2025-05-16 17:14:39,819 — [Nik] Deleted file → General/Boingo wireless/Boingo-Marco-ISE call - April21st.rtf
+2025-05-16 17:14:39,820 — 📂 File scan (Post-Delete Refresh): 4 new files today.
+2025-05-16 17:14:39,824 — 📂 File scan (Manual): 4 new files today.
+2025-05-16 17:14:40,151 — [Nik] Deleted file → General/Boingo wireless/Boingo Software Assets WWT 8 14 2024.xlsx
+2025-05-16 17:14:40,152 — 📂 File scan (Post-Delete Refresh): 3 new files today.
+2025-05-16 17:14:40,157 — 📂 File scan (Manual): 3 new files today.
+2025-05-16 17:14:40,484 — [Nik] Deleted file → General/Boingo wireless/Boingo- April 24th 2025.rtf
+2025-05-16 17:14:40,485 — 📂 File scan (Post-Delete Refresh): 2 new files today.
+2025-05-16 17:14:40,490 — 📂 File scan (Manual): 2 new files today.
+2025-05-16 17:14:40,684 — [Nik] Deleted file → General/Boingo wireless/Installed Base/Boingo Covered IB Report Sept 2024.xlsb
+2025-05-16 17:14:40,686 — 📂 File scan (Post-Delete Refresh): 1 new files today.
+2025-05-16 17:14:40,692 — 📂 File scan (Manual): 1 new files today.
+2025-05-16 17:14:41,410 — [Nik] Deleted file → General/Boingo wireless/Boingo wireless partner call - August 13 2024 .rtf
+2025-05-16 17:14:41,412 — 📂 File scan (Post-Delete Refresh): 0 new files today.
+2025-05-16 17:14:41,416 — 📂 File scan (Manual): 0 new files today.
+2025-05-16 17:15:02,264 — ⚠️ Unlock blocked: session does not own the lock
+2025-05-16 17:15:11,251 — 🚫 Lock active — denying access
+2025-05-16 17:16:59,734 — 🚫 Lock active — denying access
+2025-05-16 17:17:07,873 — ⚠️ Unlock blocked: session does not own the lock
+2025-05-16 17:17:22,099 — 🚫 Lock active — denying access
+2025-05-16 17:17:30,635 — ⚠️ Unlock blocked: session does not own the lock
+2025-05-16 17:18:28,826 — 📝 File logging initialized.
+2025-05-16 17:18:39,367 — 🕛 New day detected. Resetting file scan cache.
+2025-05-16 17:18:39,369 — 📂 File scan (4PM): 0 new files today.
+2025-05-16 17:18:44,566 — 🚫 Lock active — denying access
+2025-05-16 17:19:06,525 — ⚠️ Unlock blocked: session does not own the lock
+2025-05-16 17:20:25,955 — 📝 File logging initialized.
+2025-05-16 17:20:27,211 — 🕛 New day detected. Resetting file scan cache.
+2025-05-16 17:20:27,213 — 📂 File scan (4PM): 0 new files today.
+2025-05-16 17:20:34,901 — ⚠️ Unlock blocked: session does not own the lock
+2025-05-16 17:21:14,529 — 📝 File logging initialized.
+2025-05-16 17:21:15,133 — ⚠️ Unlock blocked: session does not own the lock
+2025-05-16 17:21:15,252 — 🕛 New day detected. Resetting file scan cache.
+2025-05-16 17:21:15,253 — 📂 File scan (4PM): 0 new files today.
+2025-05-16 17:21:59,625 — ⚠️ Unlock blocked: session does not own the lock
+2025-05-16 17:22:46,182 — ⚠️ Unlock blocked: session does not own the lock
+2025-05-16 17:23:07,568 — 📝 File logging initialized.
+2025-05-16 17:23:07,915 — 🕛 New day detected. Resetting file scan cache.
+2025-05-16 17:23:07,916 — 📂 File scan (4PM): 0 new files today.
+2025-05-16 17:23:08,122 — ⚠️ Unlock blocked: session does not own the lock
+2025-05-16 17:23:08,225 — ⚠️ Unlock blocked: session does not own the lock
+2025-05-16 17:23:23,588 — 📝 File logging initialized.
+2025-05-16 17:24:19,882 — 📝 File logging initialized.
+2025-05-16 17:24:23,783 — ⚠️ Unlock blocked: session does not own the lock
+2025-05-16 17:24:23,903 — 🕛 New day detected. Resetting file scan cache.
+2025-05-16 17:24:23,904 — 📂 File scan (4PM): 0 new files today.
+2025-05-16 17:24:31,715 — ⚠️ Unlock blocked: session does not own the lock
+2025-05-16 17:27:25,451 — 📝 File logging initialized.
+2025-05-16 17:27:32,004 — 🕛 New day detected. Resetting file scan cache.
+2025-05-16 17:27:32,005 — 📂 File scan (4PM): 0 new files today.
+2025-05-16 17:27:49,512 — 📝 File logging initialized.
+2025-05-16 17:27:49,739 — ⚠️ Unlock blocked: session does not own the lock
+2025-05-16 17:27:49,815 — 🕛 New day detected. Resetting file scan cache.
+2025-05-16 17:27:49,816 — 📂 File scan (4PM): 0 new files today.
+2025-05-16 17:28:33,435 — ⚠️ Unlock blocked: session does not own the lock
+2025-05-16 17:28:59,141 — 📝 File logging initialized.
+2025-05-16 17:29:00,804 — 🕛 New day detected. Resetting file scan cache.
+2025-05-16 17:29:00,805 — 📂 File scan (4PM): 0 new files today.
+2025-05-16 17:29:09,230 — ⚠️ Unlock blocked: session does not own the lock
+2025-05-16 17:29:15,175 — 📝 File logging initialized.
+2025-05-16 17:29:53,516 — 📝 File logging initialized.
+2025-05-16 17:30:17,961 — 🕛 New day detected. Resetting file scan cache.
+2025-05-16 17:30:17,963 — 📂 File scan (4PM): 0 new files today.
+2025-05-16 17:30:19,087 — ⚠️ Unlock blocked: session does not own the lock
+2025-05-16 17:31:41,460 — 📝 File logging initialized.
+2025-05-16 17:31:45,872 — ⚠️ Unlock blocked: session does not own the lock
+2025-05-16 17:31:45,980 — 🕛 New day detected. Resetting file scan cache.
+2025-05-16 17:31:45,982 — 📂 File scan (4PM): 0 new files today.
+2025-05-16 17:32:24,278 — ⚠️ Unlock blocked: session does not own the lock
+2025-05-16 17:32:57,047 — ⚠️ Unlock blocked: session does not own the lock
+2025-05-16 17:33:05,137 — 🚫 Lock active — denying access
+2025-05-16 17:33:09,907 — ⚠️ Unlock blocked: session does not own the lock
+2025-05-16 17:33:10,848 — ⚠️ Unlock blocked: session does not own the lock
+2025-05-16 17:33:10,957 — ⚠️ Unlock blocked: session does not own the lock
+2025-05-16 17:33:12,125 — ⚠️ Unlock blocked: session does not own the lock
+2025-05-16 17:33:12,230 — ⚠️ Unlock blocked: session does not own the lock
+2025-05-16 17:33:12,254 — ⚠️ Unlock blocked: session does not own the lock
+2025-05-16 17:35:15,362 — 📝 File logging initialized.
+2025-05-16 17:35:18,291 — ⚠️ Unlock blocked: session does not own the lock
+2025-05-16 17:35:18,412 — 🕛 New day detected. Resetting file scan cache.
+2025-05-16 17:35:18,414 — 📂 File scan (4PM): 0 new files today.
+2025-05-16 17:36:24,874 — 📝 File logging initialized.
+2025-05-16 17:36:43,794 — 📝 File logging initialized.
+2025-05-16 17:36:45,667 — 📝 File logging initialized.
+2025-05-16 17:37:06,809 — 🚫 Lock active — denying access
+2025-05-16 17:37:06,918 — 🕛 New day detected. Resetting file scan cache.
+2025-05-16 17:37:06,920 — 📂 File scan (4PM): 0 new files today.
+2025-05-16 17:37:09,578 — ⚠️ Unlock blocked: session does not own the lock
+2025-05-16 17:37:12,600 — ⚠️ Unlock blocked: session does not own the lock
+2025-05-16 17:37:31,133 — 📝 File logging initialized.
+2025-05-16 17:37:33,025 — 📝 File logging initialized.
+2025-05-16 17:37:33,888 — 🕛 New day detected. Resetting file scan cache.
+2025-05-16 17:37:33,890 — 📂 File scan (4PM): 0 new files today.
+2025-05-16 17:37:46,958 — ⚠️ Unlock blocked: session does not own the lock
+2025-05-16 17:37:50,232 — ⚠️ Unlock blocked: session does not own the lock
+2025-05-16 17:37:52,766 — ⚠️ Unlock blocked: session does not own the lock
+2025-05-16 17:38:00,114 — 📝 File logging initialized.
+2025-05-16 17:38:01,864 — 📝 File logging initialized.

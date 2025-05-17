@@ -2518,6 +2518,8 @@ def unlock():
 def files():
     search_customer = request.args.get("customer")
     files_query = DivisionDocument.query.order_by(DivisionDocument.id.desc())
+    
+    # 👇 Manual scan every time user opens the /files page
     latest_file_count = scan_and_cache(UPLOAD_FOLDER, [], scan_flag=None, label="Manual")
 
     if search_customer:
@@ -2528,13 +2530,19 @@ def files():
 
     all_files = files_query.all()
 
-    latest_files = DivisionDocument.query.order_by(DivisionDocument.id.desc()).limit(5).all()
+    # ❌ Filter out hidden system files like .DS_Store
+    all_files = [f for f in all_files if not f.filename.endswith(".DS_Store")]
 
-    # Group files under customer/general folders
+    latest_files = all_files[:5]  # top 5 most recent files
+
+    # ✅ Group files by customer, excluding empty ones
     grouped = {}
     for doc in all_files:
         customer = doc.division.customer.name if doc.division.customer else "General"
         grouped.setdefault(customer, []).append(doc)
+
+    # ❌ Remove empty groups (just in case)
+    grouped = {k: v for k, v in grouped.items() if v}
 
     customers = Customer.query.order_by(Customer.name).all()
 
@@ -2558,7 +2566,11 @@ def delete_file(file_id):
             os.remove(full_path)
         db.session.delete(doc)
         db.session.commit()
+        
         log_change("Deleted file", doc.filename)
+        # 🔁 Rescan files to update today's count
+        scan_and_cache(app.config["UPLOAD_FOLDER"], [], scan_flag=None, label="Post-Delete Refresh")
+
         #flash("🗑 File deleted successfully.", "success")
     except Exception as e:
         logger.error(f"Failed to delete file: {e}")

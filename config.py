@@ -16,7 +16,7 @@ SQLALCHEMY_TRACK_MODIFICATIONS = False
 BACKUP_LOCAL_DIR = os.path.join(BASE_DIR, "instance", "backup")
 UPLOAD_FOLDER = os.path.join(BASE_DIR, "uploads")
 LOGO_UPLOAD_FOLDER = os.path.join(BASE_DIR, "static", "logos")
-LOCK_FILE = "/tmp/db.lock"
+LOCK_FILE = os.path.join(os.path.dirname(__file__), 'tmp', 'db.lock')
 
 # === Ensure required folders exist ===
 os.makedirs(LOGO_UPLOAD_FOLDER, exist_ok=True)
