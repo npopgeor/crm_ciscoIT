@@ -2623,3 +2623,162 @@ def upload_files():
         return redirect(url_for("files"))
 
     return render_template("upload_files.html", customers=customers)
+
+
+@app.route("/download_db")
+def download_db():
+    from flask import send_file
+    import os
+
+    if not os.path.exists(DATABASE_PATH):
+        return "❌ Database file not found.", 404
+
+    return send_file(
+        DATABASE_PATH,
+        mimetype="application/octet-stream",
+        as_attachment=True,
+        download_name="account_team_current.db"
+    )
+
+@app.route("/export_all")
+def export_all():
+    from io import BytesIO, StringIO
+    from zipfile import ZipFile
+    import os
+    import csv
+    from datetime import datetime, date
+
+    zip_stream = BytesIO()
+
+    with ZipFile(zip_stream, "w") as zf:
+        # ✅ Add current live database
+        zf.write(DATABASE_PATH, arcname="account_team.db")
+
+        # ✅ Export contacts
+        contacts = Contact.query.all()
+        si = StringIO()
+        writer = csv.writer(si)
+        writer.writerow([
+            "name", "email", "phone", "role", "location", "technology", "contact_type",
+            "reports_to", "customer_name", "partner_name", "division_name", "notes"
+        ])
+        for c in contacts:
+            division_names = "; ".join([d.name for d in c.divisions]) if c.divisions else ""
+            writer.writerow([
+                c.name or "", c.email or "", c.phone or "", c.role or "", c.location or "",
+                c.technology or "", c.contact_type or "",
+                c.manager.name if c.manager else "",
+                c.customer.name if c.customer else "",
+                c.partner.name if c.partner else "",
+                division_names,
+                c.notes or "",
+            ])
+        zf.writestr(f"All_Contacts_{datetime.now().strftime('%Y-%m-%d')}.csv", si.getvalue())
+        log_change("Exported all contacts", "ZIP")
+
+        # ✅ Export action items
+        si = StringIO()
+        writer = csv.writer(si)
+        writer.writerow([
+            "Category", "Date", "Detail + Updates", "Customer",
+            "Customer Contact", "Cisco Contact", "Status"
+        ])
+        def write_items(items):
+            for item in items:
+                detail_text = item.detail or ""
+                if item.updates:
+                    updates_combined = "\n\n".join(
+                        f"- {u.timestamp.strftime('%Y-%m-%d %H:%M')} – {u.update_text}"
+                        for u in item.updates
+                    )
+                    detail_text = f"{detail_text}\n\n--- Updates ---\n{updates_combined}"
+
+                category_label = "Strategic" if item.category == "strategic" else "Day-to-Day"
+                if item.completed:
+                    category_label += " (Closed)"
+
+                writer.writerow([
+                    category_label,
+                    item.date or "",
+                    detail_text.strip(),
+                    item.customer.name if item.customer else "",
+                    item.customer_contact or "",
+                    item.cisco_contact or "",
+                    "Completed" if item.completed else "Open",
+                ])
+
+        all_items = ActionItem.query.order_by(ActionItem.date.desc()).all()
+        ordered_items = (
+            [i for i in all_items if i.category == "strategic" and not i.completed] +
+            [i for i in all_items if i.category == "daily" and not i.completed] +
+            [i for i in all_items if i.category == "strategic" and i.completed] +
+            [i for i in all_items if i.category == "daily" and i.completed]
+        )
+        write_items(ordered_items)
+        zf.writestr(f"action_items_export_{date.today().isoformat()}.csv", si.getvalue())
+        log_change("Exported all action items", "ZIP")
+
+
+        # ✅ Export meetings
+        si = StringIO()
+        writer = csv.writer(si)
+        writer.writerow(["Date", "Customer", "Notes"])
+
+        def format_date(d):
+            if isinstance(d, datetime):
+                return d.strftime('%Y-%m-%d')
+            return d or ""
+
+        meetings = Meeting.query.order_by(Meeting.date.desc()).all()
+        for m in meetings:
+            writer.writerow([
+                format_date(m.date),
+                m.customer.name if m.customer else "",
+                m.notes or "",
+            ])
+        zf.writestr(f"meeting_notes_export_{date.today().isoformat()}.csv", si.getvalue())
+
+
+        # ✅ Export recurring meetings
+        si = StringIO()
+        writer = csv.writer(si)
+        writer.writerow(["Customer", "Start Date", "Start Time", "Recurrence", "Repeat Until", "Duration (min)", "Description", "Host"])
+
+        rec_meetings = RecurringMeeting.query.order_by(RecurringMeeting.start_datetime.desc()).all()
+        for r in rec_meetings:
+            start = r.start_datetime
+            writer.writerow([
+                r.customer.name if r.customer else "",
+                start.strftime("%Y-%m-%d") if start else "",
+                start.strftime("%H:%M") if start else "",
+                r.get_human_readable_recurrence() or "",
+                r.repeat_until.strftime("%Y-%m-%d") if r.repeat_until else "",
+                r.duration_minutes or "",
+                r.description or "",
+                r.host or "",
+            ])
+
+        zf.writestr(f"recurring_meetings_export_{date.today().isoformat()}.csv", si.getvalue())
+
+
+
+
+        # ✅ Add uploaded files
+        for root, _, files in os.walk(UPLOAD_FOLDER):
+            for file in files:
+                abs_path = os.path.join(root, file)
+                rel_path = os.path.relpath(abs_path, UPLOAD_FOLDER)
+                zf.write(abs_path, arcname=os.path.join("uploads", rel_path))
+
+        # ✅ Add logs
+        if os.path.exists(CHANGE_LOG_FILE):
+            zf.write(CHANGE_LOG_FILE, arcname="logs/change_log.txt")
+
+    zip_stream.seek(0)
+
+    return send_file(
+        zip_stream,
+        mimetype="application/zip",
+        as_attachment=True,
+        download_name=f"full_export_{datetime.now().strftime('%Y-%m-%d')}.zip"
+    )

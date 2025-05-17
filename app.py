@@ -61,9 +61,9 @@ def datetimeformat(value, format="%Y-%m-%d %H:%M"):
 
 # --------------------- MAIN ---------------------
 if __name__ == "__main__":
-    ENABLE_FAKE_DATA = False  # ← Set to True if you ever want to load dummy data again
+    ENABLE_FAKE_DATA = False
 
     with app.app_context():
         db.create_all()
 
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=True)

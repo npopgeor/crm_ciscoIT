@@ -26,6 +26,10 @@
   </a>
 </div>
 
+<a href="{{ url_for('download_db') }}" class="btn btn-outline-primary">💾 Download Current DB</a>
+<a href="{{ url_for('export_all') }}" class="btn btn-outline-success">📦 Download Everything</a>
+
+
 {% if request.args.get('msg') == 'confirm_failed' %}
   <div class="alert alert-warning">❌ Confirmation failed. Entry not deleted.</div>
 {% elif request.args.get('msg') == 'deleted' %}
